@@ -24,8 +24,16 @@ public class movimentacao {
 	@Enumerated(EnumType.STRING)
 	private movimentacao_tipo tipo;
 	
+	@Column(name="idConta")
+	private Integer idConta;
 	
 	
+	public Integer getIdConta() {
+		return idConta;
+	}
+	public void setIdConta(Integer idConta) {
+		this.idConta = idConta;
+	}
 	public Integer getId() {
 		return id;
 	}
@@ -55,6 +63,12 @@ public class movimentacao {
 	}
 	public void setValor(Double valor) {
 		this.valor = valor;
+	}
+	public movimentacao_tipo getTipo() {
+		return tipo;
+	}
+	public void setTipo(movimentacao_tipo tipo) {
+		this.tipo = tipo;
 	}
 
 }
